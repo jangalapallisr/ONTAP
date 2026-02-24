@@ -52,19 +52,29 @@ echo "snapmirror modify -destination-path svm_aws:vol_aws -schedule hourly" >> $
 
 **Notes**
 The destination volume vol_aws must exist and be empty before creating the SnapMirror relationship.
+
 You may need to configure SnapMirror policies if you want to customize retention, transfer rates, or snapshot schedules.
+
 Ensure network connectivity and authentication between the two ONTAP systems.
+
 You can also use snapmirror break and snapmirror resync commands to manage SnapMirror relationships during failover or resync scenarios.
 
 **Additional Notes**
 You may need to configure SnapMirror relationships with appropriate SnapMirror policies and schedules.
+
 Ensure that the destination volume exists and is empty or prepared for SnapMirror.
+
 Network and security configurations (firewalls, VPNs, VPC peering) must allow SnapMirror traffic.
+
 SnapMirror can be synchronous or asynchronous; typically, on-prem to cloud is asynchronous.
+
 For SVM DR (disaster recovery), you might use SVM SnapMirror relationships instead of volume-level.
 
 **Here in Example Setup**
   On-premises SVM: svm_onprem
+  
   On-premises volume: vol_onprem
+  
   AWS FSxN SVM: svm_aws
+  
   AWS FSxN volume: vol_aws
