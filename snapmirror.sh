@@ -23,7 +23,7 @@
 ## ENV & Key Variables & Directories set up
 today=`date '+%Y-%m-%d'`
 if [ $# -ne 1 ]; then
-	echo "ERROR: Required Parameters are not recieved from CA7."
+	echo "ERROR: Required Parameters are not recieved from UC4."
 	echo "INFO: Usage: $0 <ENV> "
 	exit 1
 else
