@@ -17,7 +17,7 @@ set -x
 #					//arg3 vol_source (On-premises volume)
 #					//arg4 svm_dest (AWS FSxN SVM)
 #					//arg5 vol_dest (AWS FSxN volume)
-#Examle:    	./ONTAP2FSxN_SnapMirror.sh  <all>
+#Examle:    	./ONTAP2FSxN_SnapMirror.sh  all svm_ontap vol_ontap svc_fsxn vol_fsxn
 #
 # Change History:
 #----------------------------------------------------------------------------------------------------------------------------
