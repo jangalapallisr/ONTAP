@@ -9,6 +9,7 @@
 **1. Create SnapMirror Endpoint on Source (On-Prem ONTAP)**
 
 ::> snapmirror create -source-path svm_source:vol_source -destination-path svm_dest:vol_dest -type DP
+    
     svm_source:vol_source is the source volume path on on-prem ONTAP.
     svm_dest:vol_dest is the destination volume path on AWS FSxN.
     -type DP means Data Protection (SnapMirror).
