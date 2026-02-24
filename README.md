@@ -36,6 +36,7 @@
 
     You can schedule SnapMirror updates to run automatically, for example every hour:
 
+**Script Prep:**
 
 file_path="/tmp/my_snapmirror.sh"
 echo "snapmirror create -source-path svm_source:vol_source -destination-path svm_dest:vol_dest -type DP" >> $file_path
