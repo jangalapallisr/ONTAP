@@ -34,18 +34,22 @@ else
 	if [ $? -eq 0 ]; then
 		echo " Sucuessfully Created SnapMirror Relationship STEP#1 END  $(date +%x_%r)"
 		echo "STEP#2 START $(date +%x_%r)"
+		sleep 10s
 		snapmirror initialize -destination-path svm_dest:vol_dest
   		if [ $? -eq 0 ]; then
     		echo " Sucuessfully Initialized SnapMirror Relationship STEP#2 END  $(date +%x_%r)"
     		echo "STEP#3 START $(date +%x_%r)"
+			sleep 10s
     		snapmirror update -destination-path svm_dest:vol_dest
     		if [ $? -eq 0 ]; then
       			echo " Sucuessfully Updated SnapMirror Relationship STEP#3 END  $(date +%x_%r)"
       			echo "STEP#4 START $(date +%x_%r)"
+				sleep 10s
       			snapmirror show -destination-path svm_dest:vol_dest
       			if [ $? -eq 0 ]; then
       				echo " Sucuessfully Check SnapMirror Status STEP#4 END  $(date +%x_%r)"
       				echo "STEP#5 START $(date +%x_%r)"
+					sleep 10s
       				snapmirror modify -destination-path svm_aws:vol_aws -schedule hourly
       				if [ $? -eq 0 ]; then
       					echo " Sucuessfully Schedule SnapMirror Updates STEP#5 END  $(date +%x_%r)"
