@@ -17,11 +17,13 @@
 **2. Initialize SnapMirror Relationship**
 
 ::> snapmirror initialize -destination-path svm_dest:vol_dest
+
     This starts the initial baseline transfer.
     
 **3. Update SnapMirror Relationship (Incremental Updates)**
 
 ::> snapmirror update -destination-path svm_dest:vol_dest
+
     Run this periodically or schedule it for incremental replication.
 
 **4. Check SnapMirror Status**
@@ -31,6 +33,7 @@
 **5. Optional: Schedule SnapMirror Updates**
 
 ::> snapmirror modify -destination-path svm_aws:vol_aws -schedule hourly
+
     You can schedule SnapMirror updates to run automatically, for example every hour:
 
 
